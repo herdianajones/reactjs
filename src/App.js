@@ -4,9 +4,12 @@ import './App.css';
 
 class App extends Component {
   render() {
-    var nama = 'Andi';
     return (
-      <h1>Selamat datang {nama} !</h1>
+      <div style={{color:'yellow',background:'black'}}>
+        <center>
+          <h1>Selamat Datang</h1>
+        </center>
+      </div>
     );
   }
 }
