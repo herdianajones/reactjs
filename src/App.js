@@ -3,14 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  hitung(x){
-    return x*x;
-  };
+  constructor(){
+    super();
+    this.nama = 'Andi';
+  }
   render() {
     return (
-      <h1>Hasil = {this.hitung(5)}</h1>
-      );
-    }
+      <h1>Halo {this.nama}</h1>
+    );
   }
+}
 
 export default App;
