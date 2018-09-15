@@ -5,6 +5,9 @@ class Footer extends Component {
         return (
             <div>
                 <h4>Buatan saya @ 2018</h4>
+                <button className="btn btn-success">
+                    Daftar
+                </button>
             </div>
         );
     }
