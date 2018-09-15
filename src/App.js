@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './component/Header';
+import Footer from './component/Footer';
 
 class App extends Component {
   render() {
@@ -9,8 +9,9 @@ class App extends Component {
 
     return (
       <div>
-        <h1>Daftar Siswa:</h1>
-        <h1>{listSiswa}</h1>
+        <Header />
+        <h1>Selamat Datang!</h1>
+        <Footer />
       </div>
     );
   }
