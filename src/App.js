@@ -5,7 +5,10 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <h1>Selamat datang!</h1>
+      <div>
+        <h1>Selamat datang!</h1>
+        <h1>Apa kabar?</h1>
+      </div>
     );
   }
 }
