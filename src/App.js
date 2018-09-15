@@ -3,13 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.nama = 'Andi';
-  }
   render() {
+    function namaFull(id) {
+      return id.nama + ' ' + id.marga;
+    }
+    const id = {
+      nama: 'Andi',
+      marga: 'Hasibuan'
+    };
     return (
-      <h1>Halo {this.nama}</h1>
+      <h1>Halo {namaFull(id)}</h1>
     );
   }
 }
