@@ -4,11 +4,9 @@ import './App.css';
 
 class App extends Component {
   render() {
+    var nama = 'Andi';
     return (
-      <div>
-        <h1>Selamat datang!</h1>
-        <h1>Apa kabar?</h1>
-      </div>
+      <h1>Selamat datang {nama} !</h1>
     );
   }
 }
