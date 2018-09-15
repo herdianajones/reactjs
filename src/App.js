@@ -4,15 +4,19 @@ import './App.css';
 
 class App extends Component {
   render() {
-    function namaFull(id) {
-      return id.nama + ' ' + id.marga;
+    function login(x) {
+      const udahLogIn = x;
+      if (udahLogIn) {
+        return 'Anda sudah Login';
+      }
+      return 'Anda belum Login';
     }
-    const id = {
-      nama: 'Andi',
-      marga: 'Hasibuan'
-    };
+    
     return (
-      <h1>Halo {namaFull(id)}</h1>
+      <div>
+        <h1>Selamat datang!</h1>
+        <h1>{login(false)}</h1>
+      </div>
     );
   }
 }
