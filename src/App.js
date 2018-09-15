@@ -4,21 +4,16 @@ import './App.css';
 
 class App extends Component {
   render() {
-    function login(x) {
-      const udahLogIn = x;
-      if (udahLogIn) {
-        return 'Anda sudah Login';
-      }
-      return 'Anda belum Login';
-    }
+    const siswa = ['Andi','Budi','Caca'];
+    const listSiswa = siswa.map((siswa) => <li>{siswa}</li>);
     
     return (
       <div>
-        <h1>Selamat datang!</h1>
-        <h1>{login(false)}</h1>
+        <h1>Daftar Siswa:</h1>
+        <h1>{listSiswa}</h1>
       </div>
-    );
-  }
+      );
+    }
 }
 
 export default App;
