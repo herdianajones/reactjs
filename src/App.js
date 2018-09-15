@@ -4,8 +4,12 @@ import './App.css';
 
 class App extends Component {
   render() {
+    var styles = {
+      color:'yellow',
+      background:'black',
+    };
     return (
-      <div style={{color:'yellow',background:'black'}}>
+      <div style={styles}>
         <center>
           <h1>Selamat Datang</h1>
         </center>
