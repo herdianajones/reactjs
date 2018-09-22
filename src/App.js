@@ -3,16 +3,13 @@ import Header from './component/Header';
 import Footer from './component/Footer';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {nama:'Andi'};
+  }
   render() {
-    const siswa = ['Andi','Budi','Caca'];
-    const listSiswa = siswa.map((siswa, index) => <li key={index}>{siswa}</li>);
-
-    return (
-      <div>
-        <Header />
-        <h1>Selamat Datang!</h1>
-        <Footer />
-      </div>
+  return (
+    <h1>Halo {this.state.nama}</h1>
     );
   }
 }
