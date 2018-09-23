@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import Header from './component/Header';
 import Footer from './component/Footer';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {nama:'Andi'};
-  }
   render() {
-    setTimeout(() => {
-      this.setState({nama: 'Budi'});
-    }, 3000)
+    var teks = "Hak cipta dilindungi";
     return (
-      <h1>Halo {this.state.nama}</h1>
-    );
-  }
+      <div>
+        <h1>Selamat datang!</h1>
+        <Footer konten={teks} />
+      </div>
+      );
+    }
 }
 
 export default App;
