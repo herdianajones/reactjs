@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 
 class App extends Component {
-  state = { count: 0 }
-  tambah = () => {
-    this.setState({
-      count: this.state.count + 1
-    });
+  constructor(){
+    super();
+    this.state = {user:'Orang Asing'};
   }
 
-  kurang = () => {
-    this.setState({
-      count: this.state.count - 1
-    });
+  klik(){
+    this.setState({user: this.refs.nama.value});
   }
 
   render() {
     return (
       <div>
-      <center>
-        <h1>{this.state.count}</h1>
-        <div>
-          <button onClick = {this.kurang}>Kurang</button>
-          <span> </span>
-          <button onClick = {this.tambah}>Tambah</button>
-        </div>
-      </center>
+        <h1>Halo {this.state.user}!</h1>
+        <input ref="nama" type="text"/>
+        <button onClick={()=>{this.klik();}}>Klik!</button>
       </div>
       );
     }
