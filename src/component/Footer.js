@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
         return (
-            <h4>{this.props.konten}</h4>
+            <div>
+                <h4>Halo kakak {this.props.id}</h4>
+                <h4>Usia {this.props.umur} th, ya?</h4>
+            </div>
         );
     }
 }

@@ -3,11 +3,11 @@ import Footer from './component/Footer';
 
 class App extends Component {
   render() {
-    var teks = "Hak cipta dilindungi";
+    var andi = {nama:"Andi",usia:24};
     return (
       <div>
         <h1>Selamat datang!</h1>
-        <Footer konten={teks} />
+        <Footer id={andi.nama} umur={andi.usia}/>
       </div>
       );
     }
