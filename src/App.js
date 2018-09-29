@@ -14,8 +14,7 @@ class App extends Component {
     return (
       <div>
         <h1>Halo {this.state.user}!</h1>
-        <input ref="nama" type="text"/>
-        <button onClick={()=>{this.klik();}}>Klik!</button>
+        <input ref="nama" type="text" onInput={()=>{this.klik();}}/>
       </div>
       );
     }
