@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
+import { Link, Route } from 'react-router-dom';
+
+import Header from './component/Header';
+import Footer from './component/Footer';
+import Article from './component/Article';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {user:'Orang Asing'};
-  }
 
-klik(){
-  this.setState({user: this.refs.nama.value});
-}
-
-componentWillUpdate(x, y){
-  console.log('Ini Will Update '+y.user);
-}
-
-componentDidUpdate(){
-  console.log('Ini Did Update ');
-}
-
-render() {
+  render() {
     return (
       <div>
-        <h1>Halo {this.state.user}!</h1>
-        <input ref="nama" type="text" onInput={()=>{this.klik();}}/>
+        <h1>Coba Routing</h1>
+        <ul>
+          <li><Link to="/">Beranda</Link></li>
+          <li><Link to="/header">Header</Link></li>
+          <li><Link to="/article">Article</Link></li>
+          <li><Link to="/footer">Footer</Link></li>
+        </ul>
+        <div>
+          <Route path="/" component={'Home'}/>
+          <Route path="/article" component={Article}/>
+          <Route path="/header" component={Header}/>
+          <Route path="/footer" component={Footer}/>
+        </div>
       </div>
-      );
-    }
+    );
+  }
 }
 
 export default App;

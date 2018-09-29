@@ -4,8 +4,7 @@ class Footer extends Component {
     render() {
         return (
             <div>
-                <h4>Halo kakak {this.props.id}</h4>
-                <h4>Usia {this.props.umur} th, ya?</h4>
+                <h1>Ini Footer!</h1>
             </div>
         );
     }

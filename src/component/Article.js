@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Header extends Component {
+class Article extends Component {
     render() {
         return (
-            <h1>Ini Header!</h1>
+            <h1>Ini Article!</h1>
         );
     }
 }
 
-export default Header;
+export default Article;
