@@ -6,11 +6,16 @@ class App extends Component {
     this.state = {user:'Orang Asing'};
   }
 
-  klik(){
-    this.setState({user: this.refs.nama.value});
-  }
+componentWillMount(){
+  this.setState({user:'Yayan'});
+  console.log('Ini Will Mount '+this.state.user);
+}
 
-  render() {
+componentDidMount(){
+  console.log('Ini Did Mount '+this.state.user);
+}
+
+render() {
     return (
       <div>
         <h1>Halo {this.state.user}!</h1>
