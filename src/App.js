@@ -1,28 +1,39 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = {user:'Orang Asing'};
+    this.state = {
+      judul: '',
+    };
   }
 
-klik(){
-  this.setState({user: this.refs.nama.value});
-}
-
-componentWillUpdate(x, y){
-  console.log('Ini Will Update '+y.user);
-}
-
-componentDidUpdate(){
-  console.log('Ini Did Update ');
-}
+  componentDidMount(){
+    axios.get('https://facebook.github.io/react-native/movies.json')
+    .then((ambilData) => {
+      console.log(ambilData);
+      this.setState({
+        judul0: ambilData.data.movies[0].title,
+        judul1: ambilData.data.movies[1].title,
+        judul2: ambilData.data.movies[2].title,
+        judul3: ambilData.data.movies[3].title,
+        judul4: ambilData.data.movies[4].title
+      })
+    })
+  };
 
 render() {
     return (
       <div>
-        <h1>Halo {this.state.user}!</h1>
-        <input ref="nama" type="text" onInput={()=>{this.klik();}}/>
+        <center>
+          <h1>Coba Get Data</h1>
+          <p>{this.state.judul0}</p>
+          <p>{this.state.judul1}</p>
+          <p>{this.state.judul2}</p>
+          <p>{this.state.judul3}</p>
+          <p>{this.state.judul4}</p>
+        </center>
       </div>
       );
     }
