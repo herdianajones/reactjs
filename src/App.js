@@ -5,7 +5,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      judul: '',
+      judul: [],
     };
   }
 
@@ -14,26 +14,24 @@ class App extends Component {
     .then((ambilData) => {
       console.log(ambilData);
       this.setState({
-        judul0: ambilData.data.movies[0].title,
-        judul1: ambilData.data.movies[1].title,
-        judul2: ambilData.data.movies[2].title,
-        judul3: ambilData.data.movies[3].title,
-        judul4: ambilData.data.movies[4].title
+        judul: ambilData.data.movies,
       })
     })
   };
 
 render() {
+    const data = this.state.judul.map((item, index)=>{
+      var fullfilm = [item.title,item.releaseYear].join(" ");
+      return <li key={index}>{fullfilm}</li>;
+    })
     return (
       <div>
         <center>
           <h1>Coba Get Data</h1>
-          <p>{this.state.judul0}</p>
-          <p>{this.state.judul1}</p>
-          <p>{this.state.judul2}</p>
-          <p>{this.state.judul3}</p>
-          <p>{this.state.judul4}</p>
         </center>
+        <ul>
+          { data }
+        </ul>
       </div>
       );
     }
