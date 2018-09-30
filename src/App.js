@@ -5,24 +5,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      judul: [],
+      dataKu: [],
     };
   }
 
   componentDidMount(){
-    axios.get('https://facebook.github.io/react-native/movies.json')
+    axios.get('https://jsonplaceholder.typicode.com/posts')
     .then((ambilData) => {
       console.log(ambilData);
       this.setState({
-        judul: ambilData.data.movies,
+        dataKu: ambilData.data,
       })
     })
   };
 
 render() {
-    const data = this.state.judul.map((item, index)=>{
-      var fullfilm = [item.title,item.releaseYear].join(" ");
-      return <li key={index}>{fullfilm}</li>;
+    const data = this.state.dataKu.map((item, index)=>{
+      var id_title = [item.id,item.title].join(" - ");
+      return <li key={index}>{id_title}</li>;
     })
     return (
       <div>
