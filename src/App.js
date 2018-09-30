@@ -4,10 +4,12 @@ class App extends Component {
   componentDidMount(){
     axios.get('https://facebook.github.io/react-native/movies.json')
       .then((ambilData) => {
-        console.log(ambilData);
+        console.log(ambilData.data.title);
+        console.log(ambilData.data.description);
+        console.log(ambilData.data.movies);
       })
   };
-  
+
   render() {
     return (
       <div>
